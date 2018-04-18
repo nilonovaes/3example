@@ -12,7 +12,7 @@
 
 <body>
 
-    <table border="1px" >
+    <table border="1px">
         <tr>
             <td>NOME FANTASIA</td>
             <td>DATA FABRICACAO</td>
@@ -21,22 +21,29 @@
             <td>PRECO</td>
             <td>PESO</td>
         </tr>
-        <tr>
-            <td>Finn</td>
-            <td>27.03.1988</td>
-            <td>Branca</td>
-            <td>1.75</td>
-            <td>200</td>
-            <td>65kg</td>
-        </tr>
-        <tr>
-            <td>Jake</td>
-            <td>27.03.1990</td>
-            <td>Branca</td>
-            <td>2.75</td>
-            <td>100</td>
-            <td>85kg</td>
-        </tr>
+        <% for (var i=0; i<resultsHTML.length; i++){ %>
+            <tr>
+                <td>
+                    <%= resultsHTML[i].NOME_FANTASIA%>
+                </td>
+                <td>
+                    <%= resultsHTML[i].DATA_FABRICACAO%>
+                </td>
+                <td>
+                    <%= resultsHTML[i].COR%>
+                </td>
+                <td>
+                    <%= resultsHTML[i].ALTURA%>
+                </td>
+                <td>
+                    <%= resultsHTML[i].PRECO%>
+                </td>
+                <td>
+                    <%= resultsHTML[i].PESO%>
+                </td>
+
+            </tr>
+            <%}%>
     </table>
 
 
