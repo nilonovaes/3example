@@ -1,15 +1,10 @@
+var connectionFactory = require('../infra/connectionFactory');
+
 module.exports = function (app) {
     app.get('/catalogo', function (req, res) {
 
 
-        var mysql = require('mysql');
-        var connection = mysql.createConnection({
-            host: 'roldana.chtd4y9zgelt.us-east-1.rds.amazonaws.com',
-            user: 'root',
-            password: 'Pa$$4eit',
-            database: 'roldanaDB'
-        })
-
+        var connection = connectionFactory();
 
         connection.query('SELECT * FROM roldonas', function (error, results) {
             if (error) throw error;
