@@ -1,7 +1,9 @@
+var express = require('./config/express');
 var app = require('./config/express')();
 
-require('./app/routes/catalogo')(app);
+var roldanasRoutes = require('./app/routes/roldanas')(app);
 
+// process.env.AAA
 app.listen(3000, function () {
     console.log('started');
 })
